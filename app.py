@@ -1,5 +1,5 @@
 from flask import Flask, render_template, request, session, redirect
-import pyrebase4 as pyrebase
+from firebase import Firebase
 import gspread
 from google.oauth2.service_account import Credentials
 
@@ -16,7 +16,7 @@ firebaseConfig = {
     "appId": "1:923148564575:web:892d7eba7c9c66387e43ea",
     "databaseURL": "https://employee-portal-85b28-default-rtdb.firebaseio.com/"
 }
-firebase = pyrebase.initialize_app(firebaseConfig)
+firebase = Firebase(firebaseConfig)
 auth = firebase.auth()
 
 # Google Sheets config
