@@ -1,5 +1,5 @@
 from flask import Flask, render_template, request, session, redirect
-import Pyrebase as pyrebase
+import pyrebase5 as pyrebase
 import gspread
 from google.oauth2.service_account import Credentials
 
